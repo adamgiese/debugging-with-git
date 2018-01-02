@@ -11,3 +11,23 @@ body {
   min-height: 100vh;
   position: relative;
 }
+
+h1 {
+  font-size: calc(32px + 10vmin);
+}
+
+h2 {
+  font-size: calc(26px + 5vmin);
+}
+
+h3 {
+  font-size: calc(20px + 5vmin);
+}
+
+h4 {
+  font-size: calc(16px + 5vmin);
+}
+
+h1,h2,h3,h4,h5,h6 {
+  @include async-font($display, $display-fallback);
+}

@@ -1,0 +1,50 @@
+.slides {
+  list-style: none;
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  border: 5vmin solid;
+  border-image: linear-gradient(135deg, #6f749e 0%, #9a8daf 31%, #d0a8b9 58%, #f8bbb1 80%, #fde6b1 100%) 1;
+  text-align: center;
+}
+
+.slide {
+  overflow: hidden;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transition: 1s all ease-in-out;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+
+  &.distant-past {
+    right: 200%;
+    left: -300%;
+  }
+  &.past {
+    right: 100%;
+    left: -100%;
+  }
+  &.future {
+    right: -100%;
+    left: 100%;
+  }
+  &.distant-future {
+    right: -200%;
+    left: 200%;
+  }
+  &:last-child.past,
+  &:last-child.distant-past {
+    left: 0;
+    right: 0;
+  }
+  &--title {
+    margin-top: auto;
+    margin-bottom: 48px;
+  }
+}

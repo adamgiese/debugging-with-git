@@ -1,11 +1,11 @@
-export const testAction = () => (
+export const incrementSlide = () => (
   {
-    type: 'TEST_ACTION',
+    type: 'INCREMENT_SLIDE',
   }
 );
 
-export const testAnotherAction = () => (
+export const decrementSlide = () => (
   {
-    type: 'TEST_ANOTHER_ACTION',
+    type: 'DECREMENT_SLIDE',
   }
 );

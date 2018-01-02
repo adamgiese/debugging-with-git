@@ -15,7 +15,7 @@ require('./../scss/styles.scss');
 
 WebFont.load({
   google: {
-    families: ['Lato'],
+    families: ['Averia+Serif+Libre', 'Lato'],
   },
 });
 

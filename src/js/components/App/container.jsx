@@ -1,14 +1,20 @@
 import { connect } from 'react-redux';
-import { testAction } from '../../services/actions';
+import {
+  incrementSlide,
+  decrementSlide
+} from '../../services/actions';
 import App from './component.jsx';
 
 const mapStateToProps = state => ({
-  hola: state.hola,
+  activeSlide: state.activeSlide,
 });
 
 const mapDispatchToProps = dispatch => ({
-  testAction: () => {
-    dispatch(testAction());
+  incrementSlide: () => {
+    dispatch(incrementSlide());
+  },
+  decrementSlide: () => {
+    dispatch(decrementSlide());
   },
 });
 

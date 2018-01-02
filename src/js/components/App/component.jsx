@@ -1,18 +1,21 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
+import Slides from '../Slides/component.jsx';
 /* eslint-ensable no-unused-vars */
 
 const App = (props) => {
   const {
-    hola,
-    testAction,
+    activeSlide,
+    incrementSlide,
+    decrementSlide,
   } = props;
   return (
     <div className='app'>
-      { hola ?
-        <h1 className='app-title'>Hola, {hola}!</h1>
-        : <button onClick={() => testAction()}>Click Me</button>
-      }
+      <Slides
+        activeSlide={activeSlide}
+        incrementSlide={incrementSlide}
+        decrementSlide={decrementSlide}
+      />
     </div>
   );
 };

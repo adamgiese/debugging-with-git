@@ -12,5 +12,7 @@
     }],
     "max-len": ["error", 150],
     "linebreak-style": "off",
+    "no-nested-ternary": "off",
+    "arrow-body-style": "off",
   }
 }
