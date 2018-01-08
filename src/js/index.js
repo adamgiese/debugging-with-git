@@ -8,6 +8,7 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import App from './components/App/container.jsx';
 import initialState from './services/initialState';
 import reducer from './services/reducer';
+import { uriMiddleware } from './middleware/uri';
 /* eslint-ensable no-unused-vars */
 
 // styling
@@ -24,13 +25,14 @@ require('es6-promise').polyfill();
 
 /* eslint-disable no-underscore-dangle */
 const reduxDevTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
+const enhancer = reduxDevTools ? compose(applyMiddleware(uriMiddleware), reduxDevTools) : applyMiddleware(uriMiddleware);
 /* eslint-enable */
 
 // setup store
 const store = createStore(
   reducer,
   initialState,
-  reduxDevTools,
+  enhancer,
 );
 
 // app init

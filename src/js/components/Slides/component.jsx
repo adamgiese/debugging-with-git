@@ -3,7 +3,12 @@
 import React from 'react';
 import Slide from '../Slide/component.jsx';
 import Fragment from '../Fragment/component.jsx';
-import TitleSlide from '../Content/TitleSlide.jsx';
+import TitleSlide from '../Content/Title/index.jsx';
+import GrepSlides from '../Content/grep/index.jsx';
+import LogSlides from '../Content/log/index.jsx';
+import BlameSlides from '../Content/blame/index.jsx';
+import BisectSlides from '../Content/bisect/index.jsx';
+import DiffSlides from '../Content/diff/index.jsx';
 /* eslint-ensable no-unused-vars */
 
 class Slides extends React.Component {
@@ -35,13 +40,11 @@ class Slides extends React.Component {
 
     const slideList = [
       <TitleSlide />,
-      <div>
-        <Fragment>First fragment</Fragment>
-        <span><Fragment>Nested Fragment</Fragment></span>
-        <Fragment>Third fragment</Fragment>
-        <Fragment><Fragment /></Fragment>
-      </div>,
-      <h1>Hi!</h1>,
+      // ...GrepSlides,
+      // ...LogSlides,
+      ...DiffSlides,
+      ...BlameSlides,
+      ...BisectSlides,
     ];
     const slides = slideList.map((value, index) => {
       return <Slide key={index} position={index + 1} activeSlide={activeSlide}>{value}</Slide>;

@@ -2,11 +2,14 @@
 import React from 'react';
 /* eslint-ensable no-unused-vars */
 
-const TitleSlide = () => (
+const LogTitle = () => (
   <div>
-    <h1>My Talk Title</h1>
-    <p><small>by</small> Adam Giese</p>
+    <h2><code>git log</code></h2>
   </div>
 );
 
-export default TitleSlide;
+const slides = [
+  <LogTitle />,
+];
+
+export default slides;

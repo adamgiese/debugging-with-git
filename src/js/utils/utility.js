@@ -9,6 +9,17 @@ export const getSlideClass = (currentSlide, position) => {
   /* eslint-enable indent */
 };
 
+/* eslint-disable */
+export function getQueryParam(name, url) {
+  if (!url) url = window.location.href;
+  const parsedName = name.replace(/[\[\]]/g, '\\$&');
+  const regex = new RegExp(`[?&]${parsedName}(=([^&#]*)|&|#|$)`);
+  const results = regex.exec(url);
+  if (!results) return null;
+  if (!results[2]) return '';
+  return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
 /*
  * Function to count nested children of a certain type. For example, to look for the total number of <Fragment /> components within a <Slide />
  *
@@ -17,7 +28,6 @@ export const getSlideClass = (currentSlide, position) => {
  * @return {int} - total count of nested components in children
  */
 
-/* eslint-disable */
 export const deepCountComponents = (children, name) => { // TODO rewrite to use Array.reduce()
   let newCount = 0;
 

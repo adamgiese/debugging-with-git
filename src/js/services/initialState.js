@@ -1,4 +1,6 @@
+import { getQueryParam } from '../utils/utility';
+
 const initialState = {
-  activeSlide: 1,
+  activeSlide: Number(getQueryParam('slide')) || 1,
 };
 export default initialState;
