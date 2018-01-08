@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
+import Code from '../utils/code.jsx';
 /* eslint-ensable no-unused-vars */
 
 const DiffTitle = () => (
@@ -11,14 +12,12 @@ const DiffTitle = () => (
 
 const DiffCompare = () => (
   <div>
-    <pre><code>
+    <Code caption='Prints differences between the working tree and the index' >
 > git diff
-    </code></pre>
-    <p className="code-caption">Prints differences between the working tree and the index</p>
-    <pre><code>
+    </Code>
+    <Code caption='Prints differences between the working tree and the tip of the specified branch'>
 > git diff master
-    </code></pre>
-    <p className="code-caption">Prints differences between the working tree and the specified branch</p>
+    </Code>
   </div>
 );
 
