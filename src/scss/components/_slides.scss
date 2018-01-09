@@ -49,4 +49,8 @@
   ul {
     list-style-type: disc;
   }
+
+  h1:only-child {
+    margin-top: auto;
+  }
 }
