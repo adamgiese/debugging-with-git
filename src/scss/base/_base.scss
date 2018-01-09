@@ -6,6 +6,10 @@
   padding: 0;
 }
 
+html {
+  font-size: calc(1.25vh + 1.25vw + .5vmin);
+}
+
 body {
   @include async-font($sans-serif, $sans-serif-fallback);
   min-height: 100vh;
@@ -13,27 +17,31 @@ body {
 }
 
 h1 {
-  font-size: calc(32px + 10vmin);
+  font-size: 3rem;
 }
 
 h2 {
-  font-size: calc(26px + 5vmin);
+  font-size: 2rem;
 }
 
 h3 {
-  font-size: calc(20px + 5vmin);
+  font-size: 1.6rem;
 }
 
 h4 {
-  font-size: calc(16px + 5vmin);
+  font-size: 1.4rem;
 }
 
 h1,h2,h3,h4,h5,h6 {
   @include async-font($display, $display-fallback);
+
+  &:not(:last-child) {
+    margin-bottom: .25em;
+  }
 }
 
 pre {
-  font-size: calc(16px + 2vmin);
+  font-size: 1.6rem;
   background: black;
   color: white;
   min-width: 75vw;
@@ -41,11 +49,11 @@ pre {
   padding: .5em 1em;
 }
 
-p {
-  font-size: calc(16px + .5vmin);
-}
-
 .code-caption {
   min-width: 75vw;
+  text-align: left;
+}
+
+ul {
   text-align: left;
 }
