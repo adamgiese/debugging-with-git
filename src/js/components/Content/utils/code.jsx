@@ -10,8 +10,8 @@ const Code = (props) => {
 
   return (
     <div className='code'>
-      <pre><code className='code--content'>{children}</code></pre>
-      <p className='code-caption'>{caption}</p>
+      <pre className='code--content'><code>{children}</code></pre>
+      <p className='code--caption'>{caption}</p>
     </div>
   );
 };

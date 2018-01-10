@@ -40,7 +40,7 @@ class Slides extends React.Component {
 
     const slideList = [
       <TitleSlide />,
-      // ...GrepSlides,
+      ...GrepSlides,
       // ...LogSlides,
       ...DiffSlides,
       ...BlameSlides,

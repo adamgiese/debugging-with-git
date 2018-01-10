@@ -1,3 +1,14 @@
 .code {
   margin-top: 3vmin;
+  font-size: .75rem;
+}
+
+.code--content {
+  background: black;
+  color: white;
+  padding: .5em 1em;
+}
+
+.code--caption {
+  text-align: left;
 }
