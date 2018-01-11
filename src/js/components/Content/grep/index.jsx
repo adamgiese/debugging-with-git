@@ -13,13 +13,10 @@ const GrepAdvantages = () => (
   <article>
     <h3>Why git grep?</h3>
     <ul>
-      <li>Only searches files tracked by git*</li>
+      <li>By default, only searches files tracked by git</li>
       <li>Allows searching of previous commits</li>
       <li>Faster</li>
     </ul>
-    <p>
-      <small>*(unless otherwise specified)</small>
-    </p>
   </article>
 );
 
