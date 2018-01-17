@@ -14,7 +14,7 @@ const Advantages = () => (
     <h3>why git grep?</h3>
     <ul>
       <li>By default, only searches files tracked by git</li>
-      <li>Allows searching of previous commits</li>
+      <li>Allows searching of all commits in the repo</li>
       <li>Faster</li>
     </ul>
   </article>
@@ -25,6 +25,9 @@ const Default = () => (
     <h3>default usage</h3>
     <Code caption="Find all tracked occurances of 'TODO' within the current working directory">
       > git grep TODO
+    </Code>
+    <Code caption="Find all tracked occurances of 'TODO' within the current working directory in 'feature-branch'">
+      > git grep TODO feature-branch
     </Code>
   </article>
 );
@@ -53,8 +56,8 @@ const Path = () => (
       <li><Code caption="a file">> git grep TODO -- 'README.md'</Code></li>
       <li><Code caption="a directory">> git grep TODO -- 'src'</Code></li>
       <li><Code caption="wildcards">> git grep TODO -- '**/*.js'</Code></li>
-      <li><Code caption="from top of directory, regardless of current working directory">> git grep TODO -- ':(top)'</Code></li>
-      <li><Code caption="combo!">> git grep TODO -- ':(top)src/**/*.js'</Code></li>
+      <li><Code caption="from top of project, regardless of current working directory">> git grep TODO -- ':/'</Code></li>
+      <li><Code caption="combo!">> git grep -i TODO feature-branch -- ':/src/**/*.js'</Code></li>
     </ul>
   </article>
 );
