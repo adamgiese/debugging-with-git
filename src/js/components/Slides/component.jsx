@@ -40,10 +40,10 @@ class Slides extends React.Component {
 
     const slideList = [
       <TitleSlide />,
-      ...GrepSlides,
-      // ...LogSlides,
       ...DiffSlides,
       ...BlameSlides,
+      // ...LogSlides,
+      ...GrepSlides,
       ...BisectSlides,
     ];
     const slides = slideList.map((value, index) => {
