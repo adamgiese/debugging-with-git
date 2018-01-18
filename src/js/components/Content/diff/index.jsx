@@ -3,27 +3,31 @@ import React from 'react';
 import Code from '../utils/code.jsx';
 /* eslint-ensable no-unused-vars */
 
-const DiffTitle = () => (
-  <div>
-    <h2><code>git diff</code></h2>
-    <q>Show changes between commits, commit and working tree, etc</q>
-  </div>
+const Title = () => (
+  <h2>git diff</h2>
 );
 
-const DiffCompare = () => (
-  <div>
+const Overview = () => (
+  <article>
+    <h3>overview</h3>
     <Code caption='Prints differences between the working tree and the index' >
-> git diff
+      > git diff
     </Code>
     <Code caption='Prints differences between the working tree and the tip of the specified branch'>
-> git diff master
+      > git diff master
     </Code>
-  </div>
+    <Code caption='Prints differences between two commits'>
+      > git diff master..2197b13e
+    </Code>
+    <Code caption='Prints differences in a path between two commits'>
+      > git diff master..2197b13e -- src
+    </Code>
+  </article>
 );
 
 const slides = [
-  <DiffTitle />,
-  <DiffCompare />,
+  <Title />,
+  <Overview />,
 ];
 
 export default slides;
