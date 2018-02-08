@@ -4,6 +4,7 @@ import React from 'react';
 import Slide from '../Slide/component.jsx';
 import Fragment from '../Fragment/component.jsx';
 import TitleSlide from '../Content/Title/index.jsx';
+import PathspecSlides from '../Content/pathspec/index.jsx';
 import GrepSlides from '../Content/grep/index.jsx';
 import LogSlides from '../Content/log/index.jsx';
 import BlameSlides from '../Content/blame/index.jsx';
@@ -40,6 +41,7 @@ class Slides extends React.Component {
 
     const slideList = [
       <TitleSlide />,
+      ...PathspecSlides,
       ...DiffSlides,
       ...BlameSlides,
       // ...LogSlides,
