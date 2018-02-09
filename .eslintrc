@@ -14,5 +14,6 @@
     "linebreak-style": "off",
     "no-nested-ternary": "off",
     "arrow-body-style": "off",
+    "class-methods-use-this": "off",
   }
 }
