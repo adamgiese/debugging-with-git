@@ -24,7 +24,9 @@ WebFont.load({
 
 class Slides extends React.Component {
   componentDidMount() {
-    Reveal.initialize();
+    Reveal.initialize({
+      history: true,
+    });
   }
 
   render() {
