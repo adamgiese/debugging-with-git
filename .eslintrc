@@ -15,5 +15,8 @@
     "no-nested-ternary": "off",
     "arrow-body-style": "off",
     "class-methods-use-this": "off",
+    "import/no-extraneous-dependencies": "off",
+    "import/no-unresolved": "off",
+    "import/extensions": "off",
   }
 }

@@ -20,5 +20,11 @@ module.exports = {
       { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192' },
     ]
   },
+  resolve: {
+    alias: {
+      'Content': path.resolve(__dirname, 'src/js/components/Content'),
+      'Utils': path.resolve(__dirname, 'src/js/components/Utils'),
+    }
+  },
   plugins: [HTMLWebpackPluginConfig],
 }

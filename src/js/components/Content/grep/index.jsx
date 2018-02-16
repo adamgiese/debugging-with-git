@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { Fragment } from 'react';
-import Code from '../utils/code.jsx';
+import Code from 'Utils/Code.jsx';
 /* eslint-ensable no-unused-vars */
 
 const Title = () => (
