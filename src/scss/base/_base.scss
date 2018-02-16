@@ -16,37 +16,45 @@ body {
   position: relative;
 }
 
-h1 {
-  font-size: 3rem;
-}
+.reveal {
 
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.6rem;
-}
-
-h4 {
-  font-size: 1.4rem;
-}
-
-h1,h2,h3,h4,h5,h6 {
-  @include async-font($display, $display-fallback);
-  line-height: 1;
-
-  &:not(:last-child) {
-    margin-bottom: .25em;
+  h1 {
+    font-size: 2rem;
   }
-}
 
-ul {
-  text-align: left;
-}
+  h2 {
+    font-size: 1.8rem;
+  }
 
-.examples {
-  li {
-    list-style: none;
+  h3 {
+    font-size: 1.6rem;
+  }
+
+  h4 {
+    font-size: 1.4rem;
+  }
+
+  h1,h2,h3,h4,h5,h6 {
+    @include async-font($display, $display-fallback);
+    line-height: 1;
+
+    &:not(:last-child) {
+      margin-bottom: .25em;
+    }
+  }
+
+  ul {
+    text-align: left;
+  }
+
+  p {
+    max-width: 25em;
+    margin: 0 auto;
+  }
+
+  .examples {
+    li {
+      list-style: none;
+    }
   }
 }
