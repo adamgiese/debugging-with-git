@@ -7,7 +7,7 @@ const HTMLWebpackPluginConfig = new HTMLWebpackPlugin({
   inject: 'body'
 })
 module.exports = {
-  entry: ['babel-polyfill', './src/js/index.js'],
+  entry: ['babel-polyfill', './src/index.js'],
   output: {
     path: path.resolve('dist'),
     filename: 'index_bundle.js'
@@ -25,8 +25,8 @@ module.exports = {
   },
   resolve: {
     alias: {
-      'Content': path.resolve(__dirname, 'src/js/components/Content'),
-      'Utils': path.resolve(__dirname, 'src/js/components/Utils'),
+      'Content': path.resolve(__dirname, 'src/js/Content'),
+      'Utils': path.resolve(__dirname, 'src/js/Utils'),
     }
   },
   plugins: [HTMLWebpackPluginConfig],

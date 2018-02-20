@@ -6,15 +6,15 @@ import ReactDOM from 'react-dom';
 import WebFont from 'webfontloader';
 import Subtitle from 'Utils/Subtitle.jsx';
 import TitleSlide from 'Content/Title/index.jsx';
-import PathspecSlides from 'Content/pathspec/index.jsx';
-import GrepSlides from 'Content/grep/index.jsx';
-import LogSlides from 'Content/log/index.jsx';
-import BlameSlides from 'Content/blame/index.jsx';
-import BisectSlides from 'Content/bisect/index.jsx';
-import DiffSlides from 'Content/diff/index.jsx';
+import PathspecSlides from 'Content/pathspec.jsx';
+import GrepSlides from 'Content/grep.jsx';
+import LogSlides from 'Content/log.jsx';
+import BlameSlides from 'Content/blame.jsx';
+import BisectSlides from 'Content/bisect.jsx';
+import DiffSlides from 'Content/diff.jsx';
 /* eslint-ensable no-unused-vars */
 
-require('./../scss/styles.scss');
+require('./scss/styles.scss');
 
 WebFont.load({
   google: {
