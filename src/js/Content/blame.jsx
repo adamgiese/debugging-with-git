@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { Fragment } from 'react';
 import Code from 'Utils/Code.jsx';
 /* eslint-ensable no-unused-vars */
 
@@ -24,9 +24,14 @@ const Usage = () => (
   </article>
 );
 
-const slides = [
-  <Title />,
-  <Usage />,
-];
+export default () => (
+  <Fragment>
+    <section>
+      <Title />
+    </section>
 
-export default slides;
+    <section>
+      <Usage />
+    </section>
+  </Fragment>
+);

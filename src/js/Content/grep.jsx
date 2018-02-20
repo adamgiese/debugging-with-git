@@ -62,12 +62,26 @@ const Path = () => (
   </article>
 );
 
-const slides = [
-  <Title />,
-  <Advantages />,
-  <Default />,
-  <UsefulFlags />,
-  <Path />,
-];
+export default () => (
+  <Fragment>
+    <section>
+      <Title />
+    </section>
 
-export default slides;
+    <section>
+      <Advantages />
+    </section>
+
+    <section>
+      <Default />
+    </section>
+
+    <section>
+      <UsefulFlags />
+    </section>
+
+    <section>
+      <Path />
+    </section>
+  </Fragment>
+);
