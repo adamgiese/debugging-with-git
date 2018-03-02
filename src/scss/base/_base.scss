@@ -7,7 +7,7 @@
 }
 
 html {
-  font-size: calc(.5vh + 1.25vw + .5vmin);
+  font-size: calc(.5vh + 1vw + .25vmin);
 }
 
 body {
@@ -50,6 +50,10 @@ body {
   p {
     max-width: 25em;
     margin: 0 auto;
+
+    &:not(:first-child) {
+      margin-top: .5em;
+    }
   }
 
   .examples {

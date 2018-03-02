@@ -2,6 +2,7 @@
   .code {
     margin-top: 3vmin;
     font-size: .75rem;
+    line-height: 1.4;
     text-align: left;
 
     .fragment.fragment.fragment {
@@ -26,5 +27,11 @@
     font-size: .5rem;
     margin-top: .5em;
     max-width: none;
+    line-height: 1.4;
+    white-space: pre-line;
+  }
+
+  .code--comment {
+    color: #cea6b9;
   }
 }
