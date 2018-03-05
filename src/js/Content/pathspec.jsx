@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { Fragment } from 'react';
 import Code from 'Utils/Code.jsx';
+import Comment from 'Utils/Comment.jsx';
 /* eslint-ensable no-unused-vars */
 
 export default () => (
@@ -12,20 +13,26 @@ export default () => (
 
     <section>
       <p>pathspecs can be as simple as a directory</p>
-      <Code caption='All files in CWD'>> git add <Frag>.</Frag></Code>
-      <Code caption='All files in `src/` directory'>> git add <Frag>src</Frag></Code>
+      <Code>
+        > git add <Frag>.</Frag> <Comment>All files in CWD</Comment><br />
+        > git add <Frag>src</Frag> <Comment>All files in src/</Comment>
+      </Code>
     </section>
 
     <section>
       <p>you can use wildcards as well</p>
-      <Code caption='All python files recursively in CWD'>> git add <Pathspec>**.py</Pathspec></Code>
-      <Code caption='All JavaScript files recursively in `src/`'>> git add <Pathspec>src/**.js</Pathspec></Code>
+      <Code>
+        > git add <Pathspec>**.py</Pathspec> <Comment>All python files recursively in CWD</Comment><br />
+        > git add <Pathspec>src/**.js</Pathspec> <Comment>All JavaScript files recursively in `src/`</Comment>
+      </Code>
     </section>
 
     <section>
       <p>git also provided 'magic signatures'</p>
-      <Code caption='`:/` matches from the top-level of the repository'>> git add <Pathspec>:/**.js</Pathspec></Code>
-      <Code caption='`!` will exclude matching paths'>> git add -- <Frag>':/**.js :/!webpack.config.js'</Frag></Code>
+      <Code>
+        > git add <Pathspec>:/**.js</Pathspec> <Comment>Matches from top-level of repo</Comment><br />
+        > git add -- <Frag>':/**.js :/!webpack.config.js'</Frag> <Comment>! will exclude paths</Comment>
+      </Code>
     </section>
   </Fragment>
 );
