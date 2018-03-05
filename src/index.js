@@ -7,6 +7,7 @@ import WebFont from 'webfontloader';
 import Subtitle from 'Utils/Subtitle.jsx';
 import TitleSlide from 'Content/Title/index.jsx';
 import PathspecSlides from 'Content/pathspec.jsx';
+import RevisionsSlides from 'Content/revisions.jsx';
 import GrepSlides from 'Content/grep.jsx';
 import BlameSlides from 'Content/blame.jsx';
 import DiffSlides from 'Content/diff.jsx';
@@ -34,6 +35,7 @@ class Slides extends React.Component {
       // fundamentals
       <Subtitle>a quick review</Subtitle>,
       <PathspecSlides />,
+      <RevisionsSlides />,
 
       // tools
       <Subtitle>Useful Tools</Subtitle>,
