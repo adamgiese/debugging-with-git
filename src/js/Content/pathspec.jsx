@@ -14,24 +14,24 @@ export default () => (
     <section>
       <p>pathspecs can be as simple as a directory</p>
       <Code>
-        > git add <Frag>.</Frag> <Comment>All files in CWD</Comment><br />
-        > git add <Frag>src</Frag> <Comment>All files in src/</Comment>
+        $ git add <Frag>.</Frag> <Comment>All files in CWD</Comment><br />
+        $ git add <Frag>src</Frag> <Comment>All files in src/</Comment>
       </Code>
     </section>
 
     <section>
       <p>you can use wildcards as well</p>
       <Code>
-        > git add <Pathspec>**.py</Pathspec> <Comment>All python files recursively in CWD</Comment><br />
-        > git add <Pathspec>src/**.js</Pathspec> <Comment>All JavaScript files recursively in `src/`</Comment>
+        $ git add <Pathspec>**.py</Pathspec> <Comment>All python files recursively in CWD</Comment><br />
+        $ git add <Pathspec>src/**.js</Pathspec> <Comment>All JavaScript files recursively in `src/`</Comment>
       </Code>
     </section>
 
     <section>
       <p>git also provided 'magic signatures'</p>
       <Code>
-        > git add <Pathspec>:/**.js</Pathspec> <Comment>Matches from top-level of repo</Comment><br />
-        > git add -- <Frag>':/**.js :/!webpack.config.js'</Frag> <Comment>! will exclude paths</Comment>
+        $ git add <Pathspec>:/**.js</Pathspec> <Comment>Matches from top-level of repo</Comment><br />
+        $ git add -- <Frag>':/**.js :/!webpack.config.js'</Frag> <Comment>! will exclude paths</Comment>
       </Code>
     </section>
   </Fragment>

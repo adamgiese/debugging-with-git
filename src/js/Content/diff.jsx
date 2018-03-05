@@ -15,7 +15,7 @@ export default () => (
       <Code
         caption={`Prints differences between the working tree and the index.
                   This is the most common usage, but git diff is capable of much more.`}>
-        > git diff
+        $ git diff
       </Code>
     </section>
 
@@ -23,16 +23,16 @@ export default () => (
       <Code
         caption={`Prints differences between the working tree and the selected branch.
                   This is useful for figuring out where you may have broken something.`}>
-        > git diff master
+        $ git diff master
       </Code>
     </section>
 
     <section>
       <Code
         caption={'Prints differences between any two commits.'}>
-        > git diff master..feature <br />
-        > git diff ..origin/master <Comment>Ommited argument uses HEAD</Comment><br />
-        > git diff ..HEAD~ <Comment>Compares current commit to previous</Comment>
+        $ git diff master..feature <br />
+        $ git diff ..origin/master <Comment>Ommited argument uses HEAD</Comment><br />
+        $ git diff ..HEAD~ <Comment>Compares current commit to previous</Comment>
       </Code>
     </section>
 
@@ -40,19 +40,19 @@ export default () => (
       <Code
         caption={`By adding a pathspec, you can limit the scope of the diff to the specified path.
                   This is useful if you have a single file or directory you'd like to compare'`}>
-        > git diff master..feature/year-in-review -- ':/src/**.jsx'
+        $ git diff master..feature/year-in-review -- ':/src/**.jsx'
       </Code>
     </section>
 
     {/*
       <Code caption='Prints differences between the working tree and the tip of the specified branch'>
-        > git diff master
+        $ git diff master
       </Code>
       <Code caption='Prints differences between two commits'>
-        > git diff master..2197b13e
+        $ git diff master..2197b13e
       </Code>
       <Code caption='Prints differences in a path between two commits'>
-        > git diff master..2197b13e -- src
+        $ git diff master..2197b13e -- src
       </Code>
     */}
   </Fragment>

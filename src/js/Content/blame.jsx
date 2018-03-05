@@ -10,16 +10,16 @@ const Title = () => (
 const Usage = () => (
   <article>
     <Code caption="Blames every line in a given file">
-      > git blame README.md
+      $ git blame README.md
     </Code>
     <Code caption="Blames lines in absolute range in a given file">
-      > git blame -L4,6 README.md
+      $ git blame -L4,6 README.md
     </Code>
     <Code caption="Blames lines in range relative to a RegEx in a given file">
-      > git blame -L'/TODO/',+10 README.md
+      $ git blame -L'/TODO/',+10 README.md
     </Code>
     <Code caption="Blames lines in file at a specific commit">
-      > git blame 1b180ec8e^ README.md
+      $ git blame 1b180ec8e^ README.md
     </Code>
   </article>
 );

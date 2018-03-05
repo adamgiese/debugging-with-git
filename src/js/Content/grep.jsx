@@ -24,10 +24,10 @@ const Default = () => (
   <article>
     <h3>default usage</h3>
     <Code caption="Find all tracked occurances of 'TODO' within the current working directory">
-      > git grep TODO
+      $ git grep TODO
     </Code>
     <Code caption="Find all tracked occurances of 'TODO' within the current working directory in 'feature-branch'">
-      > git grep TODO feature-branch
+      $ git grep TODO feature-branch
     </Code>
   </article>
 );
@@ -53,11 +53,11 @@ const Path = () => (
   <article>
     <h3>including a pathspec</h3>
     <ul style={ { listStyle: 'none' } }>
-      <li><Code caption="a file">> git grep TODO -- 'README.md'</Code></li>
-      <li><Code caption="a directory">> git grep TODO -- 'src'</Code></li>
-      <li><Code caption="wildcards">> git grep TODO -- '**/*.js'</Code></li>
-      <li><Code caption="from top of project, regardless of current working directory">> git grep TODO -- ':/'</Code></li>
-      <li><Code caption="combo!">> git grep -i TODO feature-branch -- ':/src/**/*.js'</Code></li>
+      <li><Code caption="a file">$ git grep TODO -- 'README.md'</Code></li>
+      <li><Code caption="a directory">$ git grep TODO -- 'src'</Code></li>
+      <li><Code caption="wildcards">$ git grep TODO -- '**/*.js'</Code></li>
+      <li><Code caption="from top of project, regardless of current working directory">$ git grep TODO -- ':/'</Code></li>
+      <li><Code caption="combo!">$ git grep -i TODO feature-branch -- ':/src/**/*.js'</Code></li>
     </ul>
   </article>
 );
