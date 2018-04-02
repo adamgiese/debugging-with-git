@@ -11,6 +11,7 @@ import RevisionsSlides from 'Content/revisions.jsx';
 import GrepSlides from 'Content/grep.jsx';
 import BlameSlides from 'Content/blame.jsx';
 import DiffSlides from 'Content/diff.jsx';
+import LogSlides from 'Content/log.jsx';
 /* eslint-ensable no-unused-vars */
 
 require('./scss/styles.scss');
@@ -39,6 +40,7 @@ class Slides extends React.Component {
 
       // tools
       <Subtitle>Useful Tools</Subtitle>,
+      <LogSlides />,
       <DiffSlides />,
       <BlameSlides />,
       <GrepSlides />,
