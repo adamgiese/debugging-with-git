@@ -16,6 +16,10 @@ export default () => (
                  Includes basic information such as author, date, and message.`}>
         $ git log
       </Code>
+      <Code
+        caption={'The log can be limited by pathspec as well'}>
+        $ git log -- "file.txt"
+      </Code>
     </section>
 
     <section>
@@ -60,6 +64,22 @@ export default () => (
        $ git log --until='2018-01-01'<br />
        $ git log --author='Adam Giese'<br />
        $ git log --reverse<br />
+      </Code>
+    </section>
+
+    <section>
+      <h3>Some debugging use cases include...</h3>
+    </section>
+
+    <section>
+      <Code caption='Finding commits associated with a JIRA ticket'>
+        $ git log --grep 'WWW-1234'
+      </Code>
+      <Code caption='Viewing the history of a file'>
+        $ git log --patch --follow -- 'settings.py'
+      </Code>
+      <Code caption='Find all recent patches with a regex'>
+        $ git log --patch --since='2 weeks ago' -G'geoip' -i
       </Code>
     </section>
   </Fragment>
