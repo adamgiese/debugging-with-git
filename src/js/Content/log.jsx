@@ -58,6 +58,12 @@ export default () => (
     </section>
 
     <section>
+      <Code caption={'Limit logs to certain lines in a file'}>
+        $ git log -L 1,20:settings.py
+      </Code>
+    </section>
+
+    <section>
       <Code caption={'Other useful flags include, but are not limited to...'}>
        $ git log --no-merges<br />
        $ git log --since='2018-01-01'<br />
@@ -75,8 +81,9 @@ export default () => (
       <Code caption='Finding commits associated with a JIRA ticket'>
         $ git log --grep 'WWW-1234'
       </Code>
-      <Code caption='Viewing the history of a file'>
+      <Code caption='Viewing the history of a file or a line range'>
         $ git log --patch --follow -- 'settings.py'
+        $ git log -L 84,114:settings.py
       </Code>
       <Code caption='Find all recent patches with a regex'>
         $ git log --patch --since='2 weeks ago' -G'geoip' -i
