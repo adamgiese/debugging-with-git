@@ -43,6 +43,7 @@ export default () => (
       <Code caption="In addition to default, include files not managed by git, including those which are untracked and ignored.">--no-index</Code>
       <Code caption="In addition to default, include files not tracked by git.">--untracked</Code>
       <Code caption="Ignore Case">-i, --ignore-case</Code>
+      <Code caption="Use extended Regex">-E</Code>
     </section>
 
     <section>
