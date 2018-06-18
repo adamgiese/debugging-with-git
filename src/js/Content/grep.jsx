@@ -3,85 +3,57 @@ import React, { Fragment } from 'react';
 import Code from 'Utils/Code.jsx';
 /* eslint-ensable no-unused-vars */
 
-const Title = () => (
-  <Fragment>
-    <h2>git grep</h2>
-  </Fragment>
-);
-
-const Advantages = () => (
-  <article>
-    <h3>why git grep?</h3>
-    <ul>
-      <li>By default, only searches files tracked by git</li>
-      <li>Allows searching of all commits in the repo</li>
-      <li>Faster</li>
-    </ul>
-  </article>
-);
-
-const Default = () => (
-  <article>
-    <h3>default usage</h3>
-    <Code caption="Find all tracked occurances of 'TODO' within the current working directory">
-      $ git grep TODO
-    </Code>
-    <Code caption="Find all tracked occurances of 'TODO' within the current working directory in 'feature-branch'">
-      $ git grep TODO feature-branch
-    </Code>
-  </article>
-);
-
-const UsefulFlags = () => (
-  <article>
-    <h3>an incomplete list of <br />useful grep flags</h3>
-    <ul style={ { listStyle: 'none' } }>
-      <li>
-        <Code caption="In addition to default, include files not managed by git, including those which are untracked and ignored.">--no-index</Code>
-      </li>
-      <li>
-        <Code caption="In addition to default, include files not tracked by git.">--untracked</Code>
-      </li>
-      <li>
-        <Code caption="Ignore Case">-i, --ignore-case</Code>
-      </li>
-    </ul>
-  </article>
-);
-
-const Path = () => (
-  <article>
-    <h3>including a pathspec</h3>
-    <ul style={ { listStyle: 'none' } }>
-      <li><Code caption="a file">$ git grep TODO -- 'README.md'</Code></li>
-      <li><Code caption="a directory">$ git grep TODO -- 'src'</Code></li>
-      <li><Code caption="wildcards">$ git grep TODO -- '**/*.js'</Code></li>
-      <li><Code caption="from top of project, regardless of current working directory">$ git grep TODO -- ':/'</Code></li>
-      <li><Code caption="combo!">$ git grep -i TODO feature-branch -- ':/src/**/*.js'</Code></li>
-    </ul>
-  </article>
-);
-
 export default () => (
   <Fragment>
     <section>
-      <Title />
+      <h2>git grep</h2>
     </section>
 
     <section>
-      <Advantages />
+      <article>
+        <h3>why git grep?</h3>
+        <ul>
+          <li>By default, only searches files tracked by git</li>
+          <li>Allows searching of all commits in the repo</li>
+          <li>Fast! Comparable speed to to `ag`</li>
+        </ul>
+      </article>
     </section>
 
     <section>
-      <Default />
+      <h3>default usage</h3>
     </section>
 
     <section>
-      <UsefulFlags />
+      <article>
+        <Code caption="Find all tracked occurances of 'TODO' within the current working directory">
+          $ git grep TODO
+        </Code>
+        <Code caption="Find all tracked occurances of 'TODO' within the current working directory in 'feature-branch'">
+          $ git grep TODO feature-branch
+        </Code>
+      </article>
     </section>
 
     <section>
-      <Path />
+      <h3>an incomplete list of <br />useful grep flags</h3>
+    </section>
+
+    <section>
+      <Code caption="In addition to default, include files not managed by git, including those which are untracked and ignored.">--no-index</Code>
+      <Code caption="In addition to default, include files not tracked by git.">--untracked</Code>
+      <Code caption="Ignore Case">-i, --ignore-case</Code>
+    </section>
+
+    <section>
+      <h3>including a pathspec</h3>
+    </section>
+    <section>
+      <Code caption="a file">$ git grep TODO -- 'README.md'</Code>
+      <Code caption="a directory">$ git grep TODO -- 'src'</Code>
+      <Code caption="wildcards">$ git grep TODO -- '**/*.js'</Code>
+      <Code caption="from top of project, regardless of current working directory">$ git grep TODO -- ':/'</Code>
+      <Code caption="combo!">$ git grep -i TODO feature-branch -- ':/src/**/*.js'</Code>
     </section>
   </Fragment>
 );
