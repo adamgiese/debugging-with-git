@@ -39,8 +39,30 @@ export default () => (
     <section>
       <Code
         caption={`By adding a pathspec, you can limit the scope of the diff to the specified path.
-                  This is useful if you have a single file or directory you'd like to compare'`}>
+                  This is useful if you have a single file or directory you'd like to compare`}>
         $ git diff master..feature/year-in-review -- ':/src/**.jsx'
+      </Code>
+    </section>
+
+    <section>
+      <h3>Some debugging use cases include...</h3>
+    </section>
+
+    <section>
+      <Code caption='"Oh shit, what just broke?"'>
+        $ git diff
+      </Code>
+
+      <Code caption='"Oh shit, what broke since diverging from master?"'>
+        $ git diff master
+      </Code>
+
+      <Code caption='"Oh shit, what broke last commit?"'>
+        $ git diff HEAD~
+      </Code>
+
+      <Code caption='"Oh shit, what broke in this particular file?"'>
+        $ git diff master -- workout.py
       </Code>
     </section>
 
