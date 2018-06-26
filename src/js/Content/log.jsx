@@ -1,6 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React, { Fragment } from 'react';
-import Code from 'Utils/Code.jsx';
+import {
+  Code,
+  Comment,
+  Frag
+} from 'Utils';
 /* eslint-ensable no-unused-vars */
 
 export default () => (
@@ -34,42 +38,29 @@ export default () => (
     <section>
       <Code caption={'Limit log to patches containing a RegEx'}>
        $ git log -G'todo'<br />
-       $ git log -p -G'todo' # can be combined with -p flag<br />
-       $ git log -G'todo' -i # case insensitive
+       $ git log -G'todo' -i <Comment>case insensitive</Comment><br />
+       $ git log -p -G'todo' <Comment>can be combined with -p flag</Comment><br />
       </Code>
     </section>
 
     <section>
       <Code caption={'Limit log to patches whose log message matches a RegEx'}>
-       $ git log --grep 'WWW-1234'<br />
-      </Code>
-
-      <Code caption={'You can match any pattern...'}>
-       $ git log --grep 'route' --grep 'workout'<br />
-      </Code>
-
-      <Code caption={'...or all patterns...'}>
-       $ git log --grep 'route' --grep 'workout' --all-match<br />
-      </Code>
-
-      <Code caption={'...none of the patterns!'}>
-       $ git log --grep 'route' -grep 'workout' --invert-grep<br />
-      </Code>
-    </section>
-
-    <section>
-      <Code caption={'Limit logs to certain lines in a file'}>
-        $ git log -L 1,20:settings.py
+       $ <Frag>git log --grep 'WWW-1234' </Frag><br />
+       $ <Frag>git log --grep 'route' --grep 'workout' </Frag><Comment>matches any</Comment><br />
+       $ <Frag>git log --grep 'route' --grep 'workout' --all-match </Frag><Comment>matches all</Comment><br />
+       $ <Frag>git log --grep 'route' -grep 'workout' --invert-grep </Frag><Comment>matches none</Comment><br />
       </Code>
     </section>
 
     <section>
       <Code caption={'Other useful flags include, but are not limited to...'}>
-       $ git log --no-merges<br />
-       $ git log --since='2018-01-01'<br />
-       $ git log --until='2018-01-01'<br />
-       $ git log --author='Adam Giese'<br />
-       $ git log --reverse<br />
+       $ <Frag>git log -L 1,20:settings.py </Frag><Comment>limit to certain lines</Comment><br />
+       $ <Frag>git log --no-merges </Frag><Comment>ignore merge commits</Comment><br />
+       $ <Frag>git log --since='2018-01-01' </Frag><Comment>limit by date</Comment><br />
+       $ <Frag>git log --until='2018-01-01' </Frag><br />
+       $ <Frag>git log --since='2018-01-01' --until='2018-04-01'</Frag><br />
+       $ <Frag>git log --author='Adam Giese'</Frag><Comment>limit by author</Comment><br />
+       $ <Frag>git log --reverse </Frag><Comment>chronological order</Comment><br />
       </Code>
     </section>
 
@@ -82,7 +73,7 @@ export default () => (
         $ git log --grep 'WWW-1234'
       </Code>
       <Code caption='Viewing the history of a file or a line range'>
-        $ git log --patch --follow -- 'settings.py'
+        $ git log --patch --follow -- 'settings.py'<br />
         $ git log -L 84,114:settings.py
       </Code>
       <Code caption='Find all recent patches with a regex'>

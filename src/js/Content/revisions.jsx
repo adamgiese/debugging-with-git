@@ -1,7 +1,9 @@
 /* eslint-disable no-unused-vars */
 import React, { Fragment } from 'react';
-import Code from 'Utils/Code.jsx';
-import Comment from 'Utils/Comment.jsx';
+import {
+  Code,
+  Comment
+} from 'Utils';
 /* eslint-ensable no-unused-vars */
 
 export default () => (

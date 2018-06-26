@@ -6,9 +6,9 @@ import logo from './git-logo.png';
 const TitleSlide = () => (
   <Fragment>
     <h1>
-      Debugging<br />
+      Squashing Bugs<br />
       with<br />
-      <img src={logo} />
+      <img src={logo} style={ { maxWidth: '200px', marginTop: '.5em' } } />
     </h1>
   </Fragment>
 );

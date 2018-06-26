@@ -1,6 +1,9 @@
 /* eslint-disable no-unused-vars */
 import React, { Fragment } from 'react';
-import Code from 'Utils/Code.jsx';
+import {
+  Code,
+  Comment
+} from 'Utils';
 /* eslint-ensable no-unused-vars */
 
 export default () => (
@@ -26,35 +29,23 @@ export default () => (
 
     <section>
       <article>
-        <Code caption="Find all tracked occurances of 'TODO' within the current working directory">
-          $ git grep TODO
-        </Code>
-        <Code caption="Find all tracked occurances of 'TODO' within the current working directory in 'feature-branch'">
-          $ git grep TODO feature-branch
+        <Code>
+          $ git grep TODO <Comment>find TODO in CWD</Comment><br />
+          $ git grep TODO feature-branch <Comment>find TODO in CWD in 'feature-branch'</Comment><br />
+          $ git grep TODO --no-index <Comment>including files not managed by git</Comment><br />
+          $ git grep TODO --ignore-case <Comment>case insensitive search</Comment><br />
         </Code>
       </article>
     </section>
 
     <section>
-      <h3>an incomplete list of <br />useful grep flags</h3>
-    </section>
-
-    <section>
-      <Code caption="In addition to default, include files not managed by git, including those which are untracked and ignored.">--no-index</Code>
-      <Code caption="In addition to default, include files not tracked by git.">--untracked</Code>
-      <Code caption="Ignore Case">-i, --ignore-case</Code>
-      <Code caption="Use extended Regex">-E</Code>
-    </section>
-
-    <section>
-      <h3>including a pathspec</h3>
-    </section>
-    <section>
-      <Code caption="a file">$ git grep TODO -- 'README.md'</Code>
-      <Code caption="a directory">$ git grep TODO -- 'src'</Code>
-      <Code caption="wildcards">$ git grep TODO -- '**/*.js'</Code>
-      <Code caption="from top of project, regardless of current working directory">$ git grep TODO -- ':/'</Code>
-      <Code caption="combo!">$ git grep -i TODO feature-branch -- ':/src/**/*.js'</Code>
+      <Code caption='including a pathspec'>
+        $ git grep TODO -- 'README.md' <br />
+        $ git grep TODO -- 'src' <br />
+        $ git grep TODO -- '**/*.js' <br />
+        $ git grep TODO -- ':/' <br />
+        $ git grep -i TODO feature-branch -- ':/src/**/*.js' <br />
+      </Code>
     </section>
   </Fragment>
 );

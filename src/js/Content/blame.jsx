@@ -1,6 +1,9 @@
 /* eslint-disable no-unused-vars */
 import React, { Fragment } from 'react';
-import Code from 'Utils/Code.jsx';
+import {
+  Code,
+  Comment
+} from 'Utils';
 /* eslint-ensable no-unused-vars */
 
 export default () => (
@@ -11,17 +14,11 @@ export default () => (
 
     <section>
       <article>
-        <Code caption="Blames every line in a given file">
-          $ git blame README.md
-        </Code>
-        <Code caption="Blames lines in absolute range in a given file">
-          $ git blame -L4,6 README.md
-        </Code>
-        <Code caption="Blames lines in range relative to a RegEx in a given file">
-          $ git blame -L'/TODO/',+10 README.md
-        </Code>
-        <Code caption="Blames lines in file at a specific commit">
-          $ git blame 1b180ec8e^ README.md
+        <Code>
+          $ git blame README.md <Comment>Blame every line in given file</Comment><br />
+          $ git blame -L4,6 README.md <Comment>line range of given file</Comment><br />
+          $ git blame -L'/TODO/',+10 README.md <Comment>line range relative to regex</Comment><br />
+          $ git blame 1b180ec8e^ README.md <Comment>specificy a commit</Comment>
         </Code>
       </article>
     </section>

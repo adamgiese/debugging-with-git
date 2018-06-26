@@ -1,7 +1,11 @@
 /* eslint-disable no-unused-vars */
 import React, { Fragment } from 'react';
-import Code from 'Utils/Code.jsx';
-import Comment from 'Utils/Comment.jsx';
+import {
+  Code,
+  Comment,
+  Pathspec,
+  Frag
+} from 'Utils';
 /* eslint-ensable no-unused-vars */
 
 export default () => (
@@ -25,6 +29,9 @@ export default () => (
         $ git add <Pathspec>**.py</Pathspec> <Comment>All python files recursively in CWD</Comment><br />
         $ git add <Pathspec>src/**.js</Pathspec> <Comment>All JavaScript files recursively in `src/`</Comment>
       </Code>
+      <p className='small'>
+        <em>Note: If you are using a non-Bash shell (such as zsh) you may need to wrap your pathspec in quote if they contain a wildcard</em>
+      </p>
     </section>
 
     <section>
@@ -37,5 +44,3 @@ export default () => (
   </Fragment>
 );
 
-const Pathspec = props => <Fragment>-- <span className='fragment'>'{props.children}'</span></Fragment>;
-const Frag = props => <span className='fragment'>{props.children}</span>;

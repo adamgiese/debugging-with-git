@@ -51,9 +51,17 @@ body {
     max-width: 25em;
     margin: 0 auto;
 
+    &.small {
+      font-size: .5em;
+    }
+
     &:not(:first-child) {
       margin-top: .5em;
     }
+  }
+
+  em {
+    font-style: italic;
   }
 
   .examples {
