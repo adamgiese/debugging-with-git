@@ -5,6 +5,8 @@ import {
   Comment,
   Frag
 } from 'Utils';
+import nikePassword from './images/nikePassword.png';
+import nikeLog from './images/nikeLog.png';
 /* eslint-ensable no-unused-vars */
 
 export default () => (
@@ -79,6 +81,38 @@ export default () => (
       <Code caption='Find all recent patches with a regex'>
         $ git log --patch --since='2 weeks ago' -G'geoip' -i
       </Code>
+    </section>
+
+    <section>
+      <h3>a real life example</h3>
+    </section>
+
+    <section>
+      <img
+        src={nikePassword}
+        style={
+          {
+            maxWidth: '900px',
+          }
+        }
+      />
+    </section>
+
+    <section>
+      <Code>
+        $ git log -G'nike_password' --since='2 weeks ago'
+      </Code>
+    </section>
+
+    <section>
+      <img
+        src={nikeLog}
+        style={
+          {
+            maxWidth: '500px',
+          }
+        }
+      />
     </section>
   </Fragment>
 );
