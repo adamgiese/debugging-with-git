@@ -18,7 +18,7 @@ export default () => (
     <section>
       <p>pathspecs can be as simple as a directory</p>
       <Code>
-        $ git add <Frag>.</Frag> <Comment>All files in CWD</Comment><br />
+        $ git add <Frag>.</Frag>   <Comment>All files in CWD</Comment><br />
         $ git add <Frag>src</Frag> <Comment>All files in src/</Comment>
       </Code>
     </section>
@@ -26,7 +26,7 @@ export default () => (
     <section>
       <p>you can use wildcards as well</p>
       <Code>
-        $ git add <Pathspec>**.py</Pathspec> <Comment>All python files recursively in CWD</Comment><br />
+        $ git add <Pathspec>**.py</Pathspec>     <Comment>All python files recursively in CWD</Comment><br />
         $ git add <Pathspec>src/**.js</Pathspec> <Comment>All JavaScript files recursively in `src/`</Comment>
       </Code>
       <p className='small'>

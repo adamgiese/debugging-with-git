@@ -70,3 +70,11 @@ body {
     }
   }
 }
+
+.reveal .tight-fit {
+  font-size: calc(.3vh + .8vw + .25vmin);
+
+  .code {
+    margin-top: 1vmin;
+  }
+}

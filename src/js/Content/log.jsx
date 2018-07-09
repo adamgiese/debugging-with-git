@@ -49,20 +49,20 @@ export default () => (
       <Code caption={'Limit log to patches whose log message matches a RegEx'}>
        $ <Frag>git log --grep 'WWW-1234' </Frag><br />
        $ <Frag>git log --grep 'route' --grep 'workout' </Frag><Comment>matches any</Comment><br />
-       $ <Frag>git log --grep 'route' --grep 'workout' --all-match </Frag><Comment>matches all</Comment><br />
+       $ <Frag>git log --grep 'route' --grep 'workout' --all-match </Frag> <Comment>matches all</Comment><br />
        $ <Frag>git log --grep 'route' -grep 'workout' --invert-grep </Frag><Comment>matches none</Comment><br />
       </Code>
     </section>
 
     <section>
       <Code caption={'Other useful flags include, but are not limited to...'}>
-       $ <Frag>git log -L 1,20:settings.py </Frag><Comment>limit to certain lines</Comment><br />
-       $ <Frag>git log --no-merges </Frag><Comment>ignore merge commits</Comment><br />
+       $ <Frag>git log -L 1,20:settings.py </Frag> <Comment>limit to certain lines</Comment><br />
+       $ <Frag>git log --no-merges </Frag>         <Comment>ignore merge commits</Comment><br />
        $ <Frag>git log --since='2018-01-01' </Frag><Comment>limit by date</Comment><br />
        $ <Frag>git log --until='2018-01-01' </Frag><br />
        $ <Frag>git log --since='2018-01-01' --until='2018-04-01'</Frag><br />
-       $ <Frag>git log --author='Adam Giese'</Frag><Comment>limit by author</Comment><br />
-       $ <Frag>git log --reverse </Frag><Comment>chronological order</Comment><br />
+       $ <Frag>git log --author='Adam Giese'</Frag> <Comment>limit by author</Comment><br />
+       $ <Frag>git log --reverse </Frag>            <Comment>chronological order</Comment><br />
       </Code>
     </section>
 

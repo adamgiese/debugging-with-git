@@ -18,8 +18,7 @@ export default () => (
       <p className='fragment'>This means the maximum number of tested commits is greatly reduced - you can search 1024 commits in 10 bisections.</p>
     </section>
 
-    <section>
-      <h3>How does git bisect work?</h3>
+    <section className='tight-fit'>
       <Code caption='Start the bisect'>$ git bisect start</Code>
       <Code caption='Mark the first known "bad" commit'>
         $ git bisect bad <Comment>marks HEAD as a bad commit</Comment>
@@ -29,8 +28,8 @@ export default () => (
       </Code>
       <Code caption='As bisect navigates you, mark each commit as good or bad'>
         $ git bisect good <Comment>bisect will navigate you in a detached HEAD</Comment><br />
-        $ git bisect bad <Comment>mark each commit as good or bad</Comment><br />
-        $ git bisect bad <Comment>each bisect cuts out half of the remaining culprits</Comment><br />
+        $ git bisect bad  <Comment>mark each commit as good or bad</Comment><br />
+        $ git bisect bad  <Comment>each bisect cuts out half of the remaining culprits</Comment><br />
       </Code>
       <Code>
         $ git bisect reset <Comment>at any point you can reset</Comment><br />
@@ -41,7 +40,7 @@ export default () => (
       <h3>automating the bisect</h3>
       <Code caption='grab some ☕️ and let your computer do the work'>
         $ git bisect run COMMAND<br />
-        $ git bisect run docker-compuse run tests
+        $ git bisect run docker-compose run tests
       </Code>
     </section>
   </Fragment>

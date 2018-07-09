@@ -32,8 +32,8 @@ export default () => (
         <Code>
           $ git grep TODO <Comment>find TODO in CWD</Comment><br />
           $ git grep TODO feature-branch <Comment>find TODO in CWD in 'feature-branch'</Comment><br />
-          $ git grep TODO --no-index <Comment>including files not managed by git</Comment><br />
-          $ git grep TODO --ignore-case <Comment>case insensitive search</Comment><br />
+          $ git grep TODO --no-index     <Comment>including files not managed by git</Comment><br />
+          $ git grep TODO --ignore-case  <Comment>case insensitive search</Comment><br />
         </Code>
       </article>
     </section>

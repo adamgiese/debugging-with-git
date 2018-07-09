@@ -34,7 +34,7 @@ export default () => (
         caption={'Prints differences between any two commits.'}>
         $ git diff master..feature <br />
         $ git diff ..origin/master <Comment>Ommited argument uses HEAD</Comment><br />
-        $ git diff ..HEAD~ <Comment>Compares current commit to previous</Comment>
+        $ git diff ..HEAD~         <Comment>Compares current commit to previous</Comment>
       </Code>
     </section>
 
