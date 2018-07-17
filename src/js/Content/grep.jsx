@@ -2,7 +2,8 @@
 import React, { Fragment } from 'react';
 import {
   Code,
-  Comment
+  Comment,
+  Frag
 } from 'Utils';
 /* eslint-ensable no-unused-vars */
 
@@ -30,21 +31,21 @@ export default () => (
     <section>
       <article>
         <Code>
-          $ git grep TODO <Comment>find TODO in CWD</Comment><br />
-          $ git grep TODO feature-branch <Comment>find TODO in CWD in 'feature-branch'</Comment><br />
-          $ git grep TODO --no-index     <Comment>including files not managed by git</Comment><br />
-          $ git grep TODO --ignore-case  <Comment>case insensitive search</Comment><br />
+          $ git grep <Frag>TODO</Frag>                <Comment>find TODO in CWD</Comment><br />
+          $ git grep <Frag>TODO feature-branch</Frag> <Comment>find TODO in CWD in 'feature-branch'</Comment><br />
+          $ git grep <Frag>TODO --no-index</Frag>     <Comment>including files not managed by git</Comment><br />
+          $ git grep <Frag>TODO --ignore-case</Frag>  <Comment>case insensitive search</Comment><br />
         </Code>
       </article>
     </section>
 
     <section>
       <Code caption='including a pathspec'>
-        $ git grep TODO -- 'README.md' <br />
-        $ git grep TODO -- 'src' <br />
-        $ git grep TODO -- '**/*.js' <br />
-        $ git grep TODO -- ':/' <br />
-        $ git grep -i TODO feature-branch -- ':/src/**/*.js' <br />
+        $ git grep <Frag>TODO -- 'README.md' </Frag><br />
+        $ git grep <Frag>TODO -- 'src' </Frag><br />
+        $ git grep <Frag>TODO -- '**/*.js' </Frag><br />
+        $ git grep <Frag>TODO -- ':/' </Frag><br />
+        $ git grep <Frag>-i TODO feature-branch -- ':/src/**/*.js' </Frag><br />
       </Code>
     </section>
   </Fragment>
