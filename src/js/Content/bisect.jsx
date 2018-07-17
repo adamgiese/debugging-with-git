@@ -2,7 +2,8 @@
 import React, { Fragment } from 'react';
 import {
   Code,
-  Comment
+  Comment,
+  Frag
 } from 'Utils';
 /* eslint-ensable no-unused-vars */
 
@@ -19,27 +20,28 @@ export default () => (
     </section>
 
     <section className='tight-fit'>
-      <Code caption='Start the bisect'>$ git bisect start</Code>
+      <Code caption='Start the bisect'>
+        $ <Frag>git bisect start</Frag>
+      </Code>
       <Code caption='Mark the first known "bad" commit'>
-        $ git bisect bad <Comment>marks HEAD as a bad commit</Comment>
+        $ <Frag>git bisect bad <Comment>marks HEAD as a bad commit</Comment></Frag>
       </Code>
       <Code caption='Mark the latest known "good" commit'>
-        $ git bisect good v1.2.3 <Comment>marks v1.2.3 as a good commit</Comment>
+        $ <Frag>git bisect good v1.2.3 <Comment>marks v1.2.3 as a good commit</Comment></Frag>
       </Code>
       <Code caption='As bisect navigates you, mark each commit as good or bad'>
-        $ git bisect good <Comment>bisect will navigate you in a detached HEAD</Comment><br />
-        $ git bisect bad  <Comment>mark each commit as good or bad</Comment><br />
-        $ git bisect bad  <Comment>each bisect cuts out half of the remaining culprits</Comment><br />
+        $ <Frag>git bisect good <Comment>bisect will navigate you in a detached HEAD</Comment><br /></Frag>
+        $ <Frag>git bisect bad  <Comment>mark each commit as good or bad</Comment><br /></Frag>
+        $ <Frag>git bisect bad  <Comment>each bisect cuts out half of the remaining culprits</Comment><br /></Frag>
       </Code>
       <Code>
-        $ git bisect reset <Comment>at any point you can reset</Comment><br />
+        $ <Frag>git bisect reset <Comment>at any point you can reset</Comment><br /></Frag>
       </Code>
     </section>
 
     <section>
       <h3>automating the bisect</h3>
       <Code caption='grab some ☕️ and let your computer do the work'>
-        $ git bisect run COMMAND<br />
         $ git bisect run docker-compose run tests
       </Code>
     </section>

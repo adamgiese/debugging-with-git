@@ -2,7 +2,8 @@
 import React, { Fragment } from 'react';
 import {
   Code,
-  Comment
+  Comment,
+  Frag
 } from 'Utils';
 /* eslint-ensable no-unused-vars */
 
@@ -31,9 +32,9 @@ export default () => (
     <section>
       <Code
         caption={'Prints differences between any two commits.'}>
-        $ git diff master..feature <br />
-        $ git diff ..origin/master <Comment>Ommited argument uses HEAD</Comment><br />
-        $ git diff ..HEAD~         <Comment>Compares current commit to previous</Comment>
+        $ <Frag>git diff master..feature <br /></Frag>
+        $ <Frag>git diff ..origin/master <Comment>Ommited argument uses HEAD</Comment><br /></Frag>
+        $ <Frag>git diff ..HEAD~         <Comment>Compares current commit to previous</Comment></Frag>
       </Code>
     </section>
 
@@ -51,19 +52,19 @@ export default () => (
 
     <section>
       <Code caption='"Oh shit, what just broke?"'>
-        $ git diff
+        $ <Frag>git diff</Frag>
       </Code>
 
       <Code caption='"Oh shit, what broke since diverging from master?"'>
-        $ git diff master
+        $ <Frag>git diff master</Frag>
       </Code>
 
       <Code caption='"Oh shit, what broke last commit?"'>
-        $ git diff HEAD~
+        $ <Frag>git diff HEAD~</Frag>
       </Code>
 
       <Code caption='"Oh shit, what broke in this particular file?"'>
-        $ git diff master -- workout.py
+        $ <Frag>git diff master -- workout.py</Frag>
       </Code>
     </section>
 

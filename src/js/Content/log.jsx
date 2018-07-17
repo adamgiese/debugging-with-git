@@ -19,11 +19,11 @@ export default () => (
       <Code
         caption={`Show a list of commits in reverse chronological order.
                  Includes basic information such as author, date, and message.`}>
-        $ git log
+        $ <Frag>git log</Frag>
       </Code>
       <Code
         caption={'The log can be limited by pathspec as well'}>
-        $ git log -- "file.txt"
+        $ <Frag>git log -- "file.txt"</Frag>
       </Code>
     </section>
 
@@ -31,16 +31,16 @@ export default () => (
       <Code
         caption={`Includes a patch history in the log.
                   Useful for seeing the exact changes made`}>
-        $ git log --patch<br />
-        $ git log -p
+        $ <Frag>git log --patch</Frag><br />
+        $ <Frag>git log -p</Frag>
       </Code>
     </section>
 
     <section>
       <Code caption={'Limit log to patches containing a RegEx'}>
-       $ git log -G'login'<br />
-       $ git log -G'login' -i <Comment>case insensitive</Comment><br />
-       $ git log -p -G'login' <Comment>can be combined with -p flag</Comment><br />
+       $ <Frag>git log -G'login'</Frag><br />
+       $ <Frag>git log -G'login' -i <Comment>case insensitive</Comment></Frag><br />
+       $ <Frag>git log -p -G'login' <Comment>can be combined with -p flag</Comment></Frag><br />
       </Code>
     </section>
 
@@ -71,14 +71,14 @@ export default () => (
 
     <section>
       <Code caption='Finding commits associated with a JIRA ticket'>
-        $ git log --grep 'WWW-1234'
+        $ <Frag>git log --grep 'WWW-1234'</Frag>
       </Code>
       <Code caption='Viewing the history of a file or a line range'>
-        $ git log --patch --follow -- 'settings.py'<br />
-        $ git log -L 84,114:settings.py
+        $ <Frag>git log --patch --follow -- 'settings.py'<br /></Frag>
+        $ <Frag>git log -L 84,114:settings.py</Frag>
       </Code>
       <Code caption='Find all recent patches with a regex'>
-        $ git log --patch --since='2 weeks ago' -G'geoip' -i
+        $ <Frag>git log --patch --since='2 weeks ago' -G'geoip' -i</Frag>
       </Code>
     </section>
 

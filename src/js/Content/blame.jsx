@@ -16,10 +16,10 @@ export default () => (
     <section>
       <article>
         <Code>
-          $ git blame <Frag>README.md</Frag>                <Comment>Blame every line in given file</Comment><br />
-          $ git blame <Frag>-L4,6 README.md</Frag>          <Comment>line range of given file</Comment><br />
-          $ git blame <Frag>-L'/password/',+10 README.md</Frag> <Comment>line range relative to regex</Comment><br />
-          $ git blame <Frag>1b180ec8e^ README.md</Frag>     <Comment>specificy a commit</Comment>
+          $ <Frag>git blame README.md</Frag>                <Comment>Blame every line in given file</Comment><br />
+          $ <Frag>git blame -L4,6 README.md</Frag>          <Comment>line range of given file</Comment><br />
+          $ <Frag>git blame -L'/password/',+10 README.md</Frag> <Comment>line range relative to regex</Comment><br />
+          $ <Frag>git blame 1b180ec8e^ README.md</Frag>     <Comment>specificy a commit</Comment>
         </Code>
       </article>
     </section>

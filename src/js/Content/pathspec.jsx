@@ -3,7 +3,6 @@ import React, { Fragment } from 'react';
 import {
   Code,
   Comment,
-  Pathspec,
   Frag
 } from 'Utils';
 /* eslint-ensable no-unused-vars */
@@ -18,16 +17,16 @@ export default () => (
     <section>
       <p>pathspecs can be as simple as a directory</p>
       <Code>
-        $ git add <Frag>.</Frag>   <Comment>All files in CWD</Comment><br />
-        $ git add <Frag>src</Frag> <Comment>All files in src/</Comment>
+        $ <Frag>git add .</Frag>   <Comment>All files in CWD</Comment><br />
+        $ <Frag>git add src</Frag> <Comment>All files in src/</Comment>
       </Code>
     </section>
 
     <section>
       <p>you can use wildcards as well</p>
       <Code>
-        $ git add <Pathspec>**.py</Pathspec>     <Comment>All python files recursively in CWD</Comment><br />
-        $ git add <Pathspec>src/**.js</Pathspec> <Comment>All JavaScript files recursively in `src/`</Comment>
+        $ <Frag>git add -- '**.py'</Frag>     <Comment>All python files recursively in CWD</Comment><br />
+        $ <Frag>git add -- 'src/**.js'</Frag> <Comment>All JavaScript files recursively in `src/`</Comment>
       </Code>
       <p className='small'>
         <em>Note: If you are using a non-Bash shell (such as zsh) you may need to wrap your pathspec in quote if they contain a wildcard</em>
@@ -37,8 +36,8 @@ export default () => (
     <section>
       <p>git also provided 'magic signatures'</p>
       <Code>
-        $ git add <Pathspec>:/**.js</Pathspec> <Comment>Matches from top-level of repo</Comment><br />
-        $ git add -- <Frag>':/**.js :/!webpack.config.js'</Frag> <Comment>! will exclude paths</Comment>
+        $ <Frag>git add -- ':/**.js'</Frag> <Comment>Matches from top-level of repo</Comment><br />
+        $ <Frag>git add -- ':/**.js :/!webpack.config.js'</Frag> <Comment>! will exclude paths</Comment>
       </Code>
     </section>
   </Fragment>
