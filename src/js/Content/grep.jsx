@@ -31,21 +31,21 @@ export default () => (
     <section>
       <article>
         <Code>
-          $ git grep <Frag>TODO</Frag>                <Comment>find TODO in CWD</Comment><br />
-          $ git grep <Frag>TODO feature-branch</Frag> <Comment>find TODO in CWD in 'feature-branch'</Comment><br />
-          $ git grep <Frag>TODO --no-index</Frag>     <Comment>including files not managed by git</Comment><br />
-          $ git grep <Frag>TODO --ignore-case</Frag>  <Comment>case insensitive search</Comment><br />
+          $ git grep <Frag>password</Frag>                <Comment>find password in CWD</Comment><br />
+          $ git grep <Frag>password feature</Frag>        <Comment>find password in CWD in 'feature'</Comment><br />
+          $ git grep <Frag>password --no-index</Frag>     <Comment>including files not managed by git</Comment><br />
+          $ git grep <Frag>password --ignore-case</Frag>  <Comment>case insensitive search</Comment><br />
         </Code>
       </article>
     </section>
 
     <section>
       <Code caption='including a pathspec'>
-        $ git grep <Frag>TODO -- 'README.md' </Frag><br />
-        $ git grep <Frag>TODO -- 'src' </Frag><br />
-        $ git grep <Frag>TODO -- '**/*.js' </Frag><br />
-        $ git grep <Frag>TODO -- ':/' </Frag><br />
-        $ git grep <Frag>-i TODO feature-branch -- ':/src/**/*.js' </Frag><br />
+        $ git grep <Frag>route -- 'README.md' </Frag><br />
+        $ git grep <Frag>route -- 'src' </Frag><br />
+        $ git grep <Frag>route -- '**/*.js' </Frag><br />
+        $ git grep <Frag>route -- ':/' </Frag><br />
+        $ git grep <Frag>-i route feature-branch -- ':/src/**/*.js' </Frag><br />
       </Code>
     </section>
   </Fragment>

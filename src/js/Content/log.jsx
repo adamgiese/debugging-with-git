@@ -38,9 +38,9 @@ export default () => (
 
     <section>
       <Code caption={'Limit log to patches containing a RegEx'}>
-       $ git log -G'todo'<br />
-       $ git log -G'todo' -i <Comment>case insensitive</Comment><br />
-       $ git log -p -G'todo' <Comment>can be combined with -p flag</Comment><br />
+       $ git log -G'login'<br />
+       $ git log -G'login' -i <Comment>case insensitive</Comment><br />
+       $ git log -p -G'login' <Comment>can be combined with -p flag</Comment><br />
       </Code>
     </section>
 
