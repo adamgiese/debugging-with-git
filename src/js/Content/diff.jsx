@@ -10,7 +10,6 @@ export default () => (
   <Fragment>
     <section>
       <h2>git diff</h2>
-      <p>compare differences between revisions</p>
     </section>
 
     <section>

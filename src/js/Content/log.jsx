@@ -13,7 +13,6 @@ export default () => (
   <Fragment>
     <section>
       <h2>git log</h2>
-      <p>show commit logs</p>
     </section>
 
     <section>
