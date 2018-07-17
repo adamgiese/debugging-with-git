@@ -13,6 +13,7 @@ import BlameSlides from 'Content/blame.jsx';
 import DiffSlides from 'Content/diff.jsx';
 import LogSlides from 'Content/log.jsx';
 import BisectSlides from 'Content/bisect.jsx';
+import ThankYou from 'Content/thanks.jsx';
 /* eslint-ensable no-unused-vars */
 
 require('./scss/styles.scss');
@@ -46,6 +47,7 @@ class Slides extends React.Component {
       <BlameSlides />,
       <GrepSlides />,
       <BisectSlides />,
+      <ThankYou />,
     ];
     const slides = slideList.map((value, index) => {
       return <section key={index} className='slide'>{value}</section>;
